@@ -50,16 +50,13 @@ export class AppComponent {
   };
 
   username!: string;
-
-  newFoodType!: string;
   newFoodName!: string;
 
   addFood(){
-    if (!this.newFoodType || !this.newFoodName) {
+    if (!this.newFoodName) {
       alert("Empty field, fill out all the forms")
     } else {
       const addFood: Foods = {
-        type: this.newFoodType,
         name: this.newFoodName
       }
       this.transportationService.addFood(addFood);

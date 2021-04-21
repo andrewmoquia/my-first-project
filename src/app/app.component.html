@@ -11,19 +11,16 @@
 <h2>Your Favorite Foods:</h2>
 
 <h3>Add your favorite food.</h3>
-<input [(ngModel)]="newFoodType" placeholder="Add Food Type"/><br>
-<input [(ngModel)]="newFoodName" placeholder="Add Food Name"/><br>
+<input [(ngModel)]="newFoodName" placeholder="Add Food Name"/>
 <button (click)="addFood()">Add Food</button>
 
-<ul *ngFor ='
+<ul class="foodfav-button"*ngFor ='
   let food of foods;
   let i = index ;
 '>
   <li>
-    <button (click)="removeItem(i)">x</button> Type: {{food.type}}
-    <ul>
-      <li>Name: {{food.name}}</li>
-    </ul>
+    <button (click)="removeItem(i)">x</button>
+    {{food.name}}
   </li>
 </ul>
 

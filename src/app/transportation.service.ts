@@ -1,4 +1,3 @@
-import { asLiteral } from '@angular/compiler/src/render3/view/util';
 import { Injectable } from '@angular/core';
 import { Foods } from './foods';
 
@@ -8,22 +7,19 @@ import { Foods } from './foods';
 
 export class TransportationService {
 
-  apple: Foods = {
-    type: 'Fruit',
+  food1: Foods = {
     name: 'Apple'
   };
 
-  iceCream: Foods = {
-    type: 'Dessert',
+  food2: Foods = {
     name: 'Ice Cream'
   };
 
-  menudo: Foods = {
-    type: 'Meal',
+  food3: Foods = {
     name: 'Menudo'
   };
 
-  foods: Foods[] = [this.apple, this.iceCream, this.menudo];
+  foods: Foods[] = [this.food1, this.food2, this.food3];
 
   constructor() { };
 
