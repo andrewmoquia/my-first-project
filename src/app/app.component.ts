@@ -23,4 +23,5 @@ export class AppComponent {
   constructor(private transportationService: TransportationService) {
     this.foods = this.transportationService.getFoods();
   }
+  
 }
