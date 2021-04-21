@@ -48,5 +48,5 @@ export class AppComponent {
     this.phrase = "It's going ";
   };
 
-
+  username!: string;
 }
