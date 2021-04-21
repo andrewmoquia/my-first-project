@@ -22,6 +22,10 @@ export class AppComponent {
 
   constructor(private transportationService: TransportationService) {
     this.foods = this.transportationService.getFoods();
-  }
-  
+  };
+
+  saySomething() {
+    alert("Nothing to say actually");
+  };
+
 }
