@@ -9,11 +9,18 @@
 </ul>
 
 <h2>Your Favorite Foods:</h2>
+
+<h3>Add your favorite food.</h3>
+<input [(ngModel)]="newFoodType" placeholder="Add Food Type"/><br>
+<input [(ngModel)]="newFoodName" placeholder="Add Food Name"/><br>
+<button (click)="addFood()">Add Food</button>
+
 <ul *ngFor ='
   let food of foods;
+  let i = index ;
 '>
   <li>
-    Type: {{food.type}}
+    <button (click)="removeItem(i)">x</button> Type: {{food.type}}
     <ul>
       <li>Name: {{food.name}}</li>
     </ul>
@@ -33,4 +40,3 @@
 <p>{{username}}</p>
 <input [(ngModel)]="username" placeholder="enter a username">
 
-<button (click)='addFood()'>Add banana</button>

@@ -1,3 +1,4 @@
+import { asLiteral } from '@angular/compiler/src/render3/view/util';
 import { Injectable } from '@angular/core';
 import { Foods } from './foods';
 
@@ -32,5 +33,9 @@ export class TransportationService {
 
   addFood(addedFood: Foods) {
     this.foods.push(addedFood)
+  }
+
+  removeFood(i: number){
+    this.foods.splice(i, 1)
   }
 }

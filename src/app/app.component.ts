@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import {TransportationService} from './transportation.service';
 import { Foods } from './foods';
+import { asLiteral } from '@angular/compiler/src/render3/view/util';
 
 @Component({
   selector: 'app-root',
@@ -50,11 +51,25 @@ export class AppComponent {
 
   username!: string;
 
+  newFoodType!: string;
+  newFoodName!: string;
+
   addFood(){
-    const banana: Foods = {
-      type: 'Fruit',
-      name: 'Banana'
+    if (!this.newFoodType || !this.newFoodName) {
+      alert("Empty field, fill out all the forms")
+    } else {
+      const addFood: Foods = {
+        type: this.newFoodType,
+        name: this.newFoodName
+      }
+      this.transportationService.addFood(addFood);
     }
-    this.transportationService.addFood(banana);
   }
+
+  removeItem(i:number) {
+    this.transportationService.removeFood(i);
+  }
+
 }
+
+
