@@ -22,12 +22,12 @@ export class TransportationService {
     name: 'Menudo'
   };
 
-  foods: Foods[ ] = [this.apple, this.iceCream, this.menudo];
+  foods: Foods[] = [this.apple, this.iceCream, this.menudo];
 
   constructor() { };
 
   getFoods(){
     return this.foods;
   };
-  
+
 }
