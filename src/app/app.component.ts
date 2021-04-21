@@ -28,4 +28,9 @@ export class AppComponent {
     alert("Nothing to say actually");
   };
 
+  counter: number = 0;
+
+  increment(){
+    this.counter++;
+  }
 }
