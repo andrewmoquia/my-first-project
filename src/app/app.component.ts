@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { Foods } from './foods'
+import {TransportationService} from './transportation.service';
+import { Foods } from './foods';
 
 @Component({
   selector: 'app-root',
@@ -17,20 +18,9 @@ export class AppComponent {
     return this.firstName + " " + this.secondName;
   };
 
-  apple: Foods = {
-    type: 'Fruit',
-    name: 'Apple'
-  };
+  foods: Foods[];
 
-  iceCream: Foods = {
-    type: 'Dessert',
-    name: 'Ice Cream'
-  };
-
-  menudo: Foods = {
-    type: 'Meal',
-    name: 'Menudo'
-  };
-
-  foods: Foods[ ] = [this.apple, this.iceCream, this.menudo];
+  constructor(private transportationService: TransportationService) {
+    this.foods = this.transportationService.getFoods();
+  }
 }
