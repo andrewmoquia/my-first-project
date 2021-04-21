@@ -29,5 +29,8 @@ export class TransportationService {
   getFoods(){
     return this.foods;
   };
-  
+
+  addFood(addedFood: Foods) {
+    this.foods.push(addedFood)
+  }
 }

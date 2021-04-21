@@ -49,4 +49,12 @@ export class AppComponent {
   };
 
   username!: string;
+
+  addFood(){
+    const banana: Foods = {
+      type: 'Fruit',
+      name: 'Banana'
+    }
+    this.transportationService.addFood(banana);
+  }
 }
