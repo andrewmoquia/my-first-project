@@ -38,12 +38,15 @@ export class AppComponent {
     this.counter -= 1;
   }
 
-  phrase: string = "It's going "
+  phrase: string = "It's going ";
 
   addPhrase(){
-    this.phrase += "...and going "
-  }
+    this.phrase += "...and going ";
+  };
+
+  resetPhrase(){
+    this.phrase = "It's going ";
+  };
 
 
-  
 }
