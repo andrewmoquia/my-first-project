@@ -37,4 +37,13 @@ export class AppComponent {
   decrement(){
     this.counter -= 1;
   }
+
+  phrase: string = "It's going "
+
+  addPhrase(){
+    this.phrase += "...and going "
+  }
+
+
+  
 }
