@@ -31,6 +31,10 @@ export class AppComponent {
   counter: number = 0;
 
   increment(){
-    this.counter++;
+    this.counter += 1;
+  }
+
+  decrement(){
+    this.counter -= 1;
   }
 }
